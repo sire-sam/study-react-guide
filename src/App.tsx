@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Timer from './timer/Timer';
+import Welcome from './welcome/Welcome';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Welcome name={'World'}/>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,7 +21,7 @@ const App = () => {
         >
           Learn React
         </a>
-        <Timer/>
+        <Timer label={"time is"}/>
       </header>
     </div>
   );

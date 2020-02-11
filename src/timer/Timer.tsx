@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Timer = () => {
+const Timer = (prop: {label: string}) => {
   return (
     <span className="timer">
-      {new Date().toLocaleTimeString()}
+      {prop.label} {new Date().toLocaleTimeString()}
     </span>
   )
 }
