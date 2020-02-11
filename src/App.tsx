@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Timer from './timer/Timer';
-import Welcome from './welcome/Welcome';
+import Timer from './top-bar/timer/Timer';
+import Welcome from './top-bar/welcome/Welcome';
 
 const App = () => {
   return (

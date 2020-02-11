@@ -4,6 +4,8 @@
     <list default="true" id="29762619-45ac-44d1-bdb6-8e3e17f3eb49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/top-bar/timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/top-bar/welcome/Welcome.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/top-bar" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -63,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581448265357</updated>
-      <workItem from="1581448267874" duration="1745000" />
+      <workItem from="1581448267874" duration="2873000" />
     </task>
     <task id="LOCAL-00001" summary="Include Idea files">
       <created>1581449966359</created>
@@ -93,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581450063840</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixup! Rendering element from official doc  step-by-step guide">
+      <created>1581450173181</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581450173181</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Use props in components">
+      <created>1581454969789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581454969789</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,13 +135,15 @@
     <MESSAGE value="Include Idea files" />
     <MESSAGE value="fixup" />
     <MESSAGE value="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element" />
+    <MESSAGE value="fixup! Rendering element from official doc  step-by-step guide" />
+    <MESSAGE value="Use props in components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use props in components" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581449913506">
+    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581454969662">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581449913506" />
+    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581454969662" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1581450125451">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -141,5 +164,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="287" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1581449902363" />
+    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor" timestamp="1581450183572">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581450183572" />
+    <state x="543" y="431" key="git4idea.rebase.GitUnstructuredEditor" timestamp="1581450188798">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="543" y="431" key="git4idea.rebase.GitUnstructuredEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581450188798" />
   </component>
 </project>
