@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29762619-45ac-44d1-bdb6-8e3e17f3eb49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/top-bar/timer/Timer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/top-bar/welcome/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581448265357</updated>
-      <workItem from="1581448267874" duration="2873000" />
+      <workItem from="1581448267874" duration="5783000" />
     </task>
     <task id="LOCAL-00001" summary="Include Idea files">
       <created>1581449966359</created>
@@ -114,7 +112,35 @@
       <option name="project" value="LOCAL" />
       <updated>1581454969789</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update components structure">
+      <created>1581455079695</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581455079695</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add user related module">
+      <created>1581458030078</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581458030078</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add comment module">
+      <created>1581458044074</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581458044074</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implement comment with and slightly review layout">
+      <created>1581458105181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581458105181</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,13 +163,21 @@
     <MESSAGE value="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element" />
     <MESSAGE value="fixup! Rendering element from official doc  step-by-step guide" />
     <MESSAGE value="Use props in components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use props in components" />
+    <MESSAGE value="Update components structure" />
+    <MESSAGE value="Add user related module" />
+    <MESSAGE value="Add comment module" />
+    <MESSAGE value="Implement comment with and slightly review layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement comment with and slightly review layout" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581454969662">
+    <state x="567" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581455575676">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581454969662" />
+    <state x="567" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1581455575676" />
+    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581458105072">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581458105072" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1581450125451">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -172,5 +206,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="543" y="431" key="git4idea.rebase.GitUnstructuredEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581450188798" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581455351341">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1581455351341" />
   </component>
 </project>
