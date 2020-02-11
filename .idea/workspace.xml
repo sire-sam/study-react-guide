@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29762619-45ac-44d1-bdb6-8e3e17f3eb49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timer/Timer.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timer/Timer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +63,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581448265357</updated>
-      <workItem from="1581448267874" duration="1532000" />
+      <workItem from="1581448267874" duration="1745000" />
     </task>
+    <task id="LOCAL-00001" summary="Include Idea files">
+      <created>1581449966359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581449966359</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixup">
+      <created>1581450006512</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581450006512</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixup">
+      <created>1581450013030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581450013030</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element">
+      <created>1581450063840</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581450063840</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,11 +110,21 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Include Idea files" />
+    <MESSAGE value="fixup" />
+    <MESSAGE value="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rendering element from official doc  step-by-step guide&#10;&#10;https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581449913506">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581449913506" />
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1581450125451">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581450125451" />
     <state width="1638" height="287" key="GridCell.Tab.0.bottom" timestamp="1581449902364">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
