@@ -1,3 +1,11 @@
+# React guide
+
+Following along react "getting started" doc: https://reactjs.org/docs/getting-started.html.
+
+Don't expect anything fancy here, just my own exploration of library.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
