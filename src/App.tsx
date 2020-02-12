@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Timer from './top-bar/timer/Timer';
 import Welcome from './top-bar/welcome/Welcome';
 import { UserInterface } from './user/user.interface';
 import { CommentInterface } from './comment/comment.interface';
 import Comment from './comment/Comment';
+import Clock from './top-bar/clock/Clock';
 
 const activeUser: UserInterface = {
   name: 'You',
@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="app__header">
-        <Timer label={"time is"}/>
+        <Clock label={"time is"}/>
       </header>
       <main className="app__content">
         <img src={logo} className="app__logo" alt="logo"/>
