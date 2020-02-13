@@ -56,13 +56,13 @@
 	padding: 1rem;
 }
 
-.top-bar__user {
+.top-bar__login {
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
 }
 
-.top-bar__user-name {
+.top-bar__greeting {
 	margin: 0 .5rem 0;
 }
 
