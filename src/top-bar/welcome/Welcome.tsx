@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Welcome = (props: { name: string }) => {
+const Welcome = (props: { name: string, className: string }) => {
   return (
-    <p>Hello, {props.name}</p>
+    <p className={props.className}>Hello, {props.name}</p>
   );
-}
+};
 
 export default Welcome;

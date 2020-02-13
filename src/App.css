@@ -12,17 +12,6 @@
 	}
 }
 
-.app__header {
-	background-color: #282c34;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
-	font-size: 1rem;
-	color: lightgray;
-	padding: .4rem;
-}
-
 .app__content {
 	margin-bottom: 2rem;
 	text-align: center;
@@ -43,6 +32,10 @@
 	text-decoration: none;
 }
 
+.btn:disabled {
+	opacity: .6;
+}
+
 @keyframes app-logo-spin {
 	from {
 		transform: rotate(0deg);
@@ -52,6 +45,26 @@
 	}
 }
 
+.top-bar {
+	background-color: #282c34;
+	display: flex;
+	flex-direction: row	;
+	align-items: baseline;
+	justify-content: space-between;
+	font-size: 1rem;
+	color: lightgray;
+	padding: 1rem;
+}
+
+.top-bar__user {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.top-bar__user-name {
+	margin: 0 .5rem 0;
+}
 
 .comment {
 	display: flex;
