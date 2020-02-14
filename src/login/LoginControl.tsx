@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 import { LoginStateInterface } from './login.interfaces';
-import LoginButton from './LoginButton';
+import Login from './Login';
 import LogoutButton from './LogoutButton';
 
-export class LoginControl<P extends { change: (isLoggedIn: boolean) => void }>
+export class LoginControl<P extends { change: (isLoggedIn: boolean, userName: string) => void }>
   extends React.Component<P, LoginStateInterface> {
   private loginDelay = 1000;
 
@@ -12,17 +12,18 @@ export class LoginControl<P extends { change: (isLoggedIn: boolean) => void }>
     this.state = {
       isLoggingIn: false,
       isLoggedIn: false,
+      userName: '',
     };
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
   }
 
   private isLoggedInChanged() {
-    this.props.change(this.state.isLoggedIn);
+    this.props.change(this.state.isLoggedIn, this.state.userName);
   }
 
-  login() {
-    this.setState({ isLoggingIn: true });
+  login(userName: string) {
+    this.setState({ isLoggingIn: true, userName });
     window.setTimeout(
       () => {
         this.setState({ isLoggedIn: true, isLoggingIn: false }, this.isLoggedInChanged);
@@ -38,7 +39,7 @@ export class LoginControl<P extends { change: (isLoggedIn: boolean) => void }>
   render(): ReactNode {
     return this.state.isLoggedIn
       ? (<LogoutButton onClick={this.logout}/>)
-      : (<LoginButton onClick={this.login} disabled={this.state.isLoggingIn}/>);
+      : (<Login onSubmit={this.login} disabled={this.state.isLoggingIn}/>);
   }
 
 }

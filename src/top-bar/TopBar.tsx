@@ -4,14 +4,7 @@ import { LoginControl } from '../login/LoginControl';
 import Welcome from './welcome/Welcome';
 
 export class TopBar extends React.Component<{}, { isLoggedIn: boolean }> {
-  static randomUserNames = ['World', 'God', 'George'];
-
-  static randomName(): string {
-    const randomIndex = Math.round(Math.random() * this.randomUserNames.length) - 1;
-    return this.randomUserNames[randomIndex];
-  }
-
-  private userName = TopBar.randomName();
+  private userName = '';
 
   constructor(props: {}) {
     super(props);
@@ -19,9 +12,9 @@ export class TopBar extends React.Component<{}, { isLoggedIn: boolean }> {
     this.onLoginChanged = this.onLoginChanged.bind(this);
   }
 
-  onLoginChanged(isLoggedIn: boolean) {
+  onLoginChanged(isLoggedIn: boolean, userName: string) {
     if (isLoggedIn) {
-      this.userName = TopBar.randomName();
+      this.userName = userName;
     }
     this.setState({ isLoggedIn });
   }
