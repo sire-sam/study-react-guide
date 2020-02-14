@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="29762619-45ac-44d1-bdb6-8e3e17f3eb49" name="Default Changelist" comment="">
+    <list default="true" id="29762619-45ac-44d1-bdb6-8e3e17f3eb49" name="Default Changelist" comment="Add fake login/logout to handle events&#10;&#10;Note: use of conditional rendering here is done &quot;by feeling&quot;&#10;I did not read the dedicated section for &quot;conditional rendering&quot;.&#10;But it's the next one.">
+      <change afterPath="$PROJECT_DIR$/src/comment/CommentList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comment/comments.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comment/Comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comment/Comment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comment/comment.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comment/comment.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../crea/evo_website" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,11 +43,16 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/login" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/top-bar" />
     </key>
   </component>
@@ -68,7 +81,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581448265357</updated>
-      <workItem from="1581448267874" duration="5783000" />
+      <workItem from="1581448267874" duration="6372000" />
+      <workItem from="1581537636420" duration="4573000" />
+      <workItem from="1581627642661" duration="5958000" />
+      <workItem from="1581712967271" duration="282000" />
+      <workItem from="1581714031648" duration="3433000" />
     </task>
     <task id="LOCAL-00001" summary="Include Idea files">
       <created>1581449966359</created>
@@ -140,7 +157,56 @@
       <option name="project" value="LOCAL" />
       <updated>1581458105181</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixup! Implement comment with and slightly review layout">
+      <created>1581458165298</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581458165298</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Explain purpose of repo in Readme (no purpose)">
+      <created>1581458821938</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581458821938</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Use React.Component class for Timer (who is now Clock)">
+      <created>1581540714043</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581540714043</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Use React.Component.state to update clock time">
+      <created>1581544726000</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1581544726000</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add fake login/logout to handle events&#10;&#10;Note: use of conditional rendering here is done &quot;by feeling&quot;&#10;I did not read the dedicated section for &quot;conditional rendering&quot;.&#10;But it's the next one.">
+      <created>1581631187546</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1581631187546</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implement login control like in guide example&#10;&#10;Also have a quick look at &quot;lifting state up&quot; to keep&#10;the Welcome message only when user is loggedIn.&#10;Perhaps it could be enhanced in future, becaause I &#10;looked for &quot;familiar&quot; solution more than&#10;reading the section.">
+      <created>1581636167495</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1581636167495</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix code styling by running inspection">
+      <created>1581714385631</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1581714385631</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +217,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -166,49 +234,96 @@
     <MESSAGE value="Update components structure" />
     <MESSAGE value="Add user related module" />
     <MESSAGE value="Add comment module" />
-    <MESSAGE value="Implement comment with and slightly review layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement comment with and slightly review layout" />
+    <MESSAGE value="Implement comment component and slightly review layout" />
+    <MESSAGE value="fixup! Implement comment with and slightly review layout" />
+    <MESSAGE value="Explain purpose of repo in Readme (no purpose)" />
+    <MESSAGE value="Use React.Component class for Timer (who is now Clock)" />
+    <MESSAGE value="Use React.Component.state to update clock time" />
+    <MESSAGE value="Add fake login/logout to handle events&#10;&#10;Note: use of conditional rendering here is done &quot;by feeling&quot;&#10;I did not read the dedicated section for &quot;conditional rendering&quot;.&#10;But it's the next one." />
+    <MESSAGE value="Implement login control like in guide example&#10;&#10;Also have a quick look at &quot;lifting state up&quot; to keep&#10;the Welcome message only when user is loggedIn.&#10;Perhaps it could be enhanced in future, becaause I &#10;looked for &quot;familiar&quot; solution more than&#10;reading the section." />
+    <MESSAGE value="Fix code styling issues in multiple files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix code styling issues in multiple files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="567" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581455575676">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="567" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1581455575676" />
-    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581458105072">
+    <state x="588" y="388" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581717824262">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581458105072" />
-    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1581450125451">
+    <state x="588" y="388" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1581717824262" />
+    <state x="433" y="127" key="CommitChangelistDialog2" timestamp="1581717820427">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581450125451" />
-    <state width="1638" height="287" key="GridCell.Tab.0.bottom" timestamp="1581449902364">
+    <state x="433" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1581717820427" />
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1581544817521">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="287" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1581449902364" />
-    <state width="1638" height="287" key="GridCell.Tab.0.center" timestamp="1581449902363">
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581544817521" />
+    <state x="636" y="438" key="GitRewordDialog" timestamp="1581714409736">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="287" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1581449902363" />
-    <state width="1638" height="287" key="GridCell.Tab.0.left" timestamp="1581449902362">
+    <state x="636" y="438" key="GitRewordDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581714409736" />
+    <state x="591" y="339" width="702" height="199" key="Github.ShareDialog" timestamp="1581458733814">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="287" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1581449902362" />
-    <state width="1638" height="287" key="GridCell.Tab.0.right" timestamp="1581449902363">
+    <state x="591" y="339" width="702" height="199" key="Github.ShareDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581458733814" />
+    <state width="1638" height="184" key="GridCell.Tab.0.bottom" timestamp="1581717824503">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="287" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1581449902363" />
-    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor" timestamp="1581450183572">
+    <state width="1638" height="184" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1581717824503" />
+    <state width="1638" height="287" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1440.301.1440.900@0.0.2560.1440" timestamp="1581583812284" />
+    <state width="818" height="195" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581636290138" />
+    <state width="1638" height="184" key="GridCell.Tab.0.center" timestamp="1581717824502">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581450183572" />
+    <state width="1638" height="184" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1581717824502" />
+    <state width="1638" height="287" key="GridCell.Tab.0.center/0.0.2560.1440/-1440.301.1440.900@0.0.2560.1440" timestamp="1581583812283" />
+    <state width="818" height="195" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581636290137" />
+    <state width="1638" height="184" key="GridCell.Tab.0.left" timestamp="1581717824502">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="184" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1581717824502" />
+    <state width="1638" height="287" key="GridCell.Tab.0.left/0.0.2560.1440/-1440.301.1440.900@0.0.2560.1440" timestamp="1581583812282" />
+    <state width="818" height="195" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581636290137" />
+    <state width="1638" height="184" key="GridCell.Tab.0.right" timestamp="1581717824503">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="184" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1581717824503" />
+    <state width="1638" height="287" key="GridCell.Tab.0.right/0.0.2560.1440/-1440.301.1440.900@0.0.2560.1440" timestamp="1581583812283" />
+    <state width="818" height="195" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581636290137" />
+    <state x="594" y="242" key="RollbackChangesDialog" timestamp="1581631145160">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="594" y="242" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581631145160" />
+    <state x="340" y="242" key="SettingsEditor" timestamp="1581714604409">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="242" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581714604409" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1581714125856">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1581714125856" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1581714418384">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1581714418384" />
+    <state x="505" y="282" width="669" height="486" key="find.popup" timestamp="1581714129549">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="282" width="669" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1581714129549" />
+    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor" timestamp="1581458169501">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="602" y="261" key="git4idea.rebase.GitRebaseEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581458169500" />
     <state x="543" y="431" key="git4idea.rebase.GitUnstructuredEditor" timestamp="1581450188798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="543" y="431" key="git4idea.rebase.GitUnstructuredEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1581450188798" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581455351341">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581717822723">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1581455351341" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1581717822723" />
   </component>
 </project>

@@ -2,9 +2,9 @@ import React from 'react';
 import UserCard from '../user/UserCard';
 import { CommentInterface } from './comment.interface';
 
-const Comment = (props: CommentInterface) => {
+const Comment = (props: CommentInterface & {className?: string}) => {
   return (
-    <div className="comment">
+    <div className={`comment ${props.className}`}>
       <UserCard className="comment__user-card" user={props.author}/>
       <span className="comment__content">
         <span>

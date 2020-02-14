@@ -19,7 +19,7 @@
 
 .app__aside {
   display: block;
-  padding: 0 1rem;
+	border-top: 1px solid #4C4C4C;
 }
 
 .btn {
@@ -107,4 +107,18 @@
 .user-card__name {
 	font-size: .9rem;
 	margin-bottom: .2rem;
+}
+
+.comment-list {
+	background: #EEE;
+	padding: .5rem;
+}
+
+.comment-list__item {
+	padding: 1rem 0;
+	border-bottom: 1px solid #C4C4C4;
+}
+
+.comment-list__item:last-child {
+	border-bottom: 0;
 }

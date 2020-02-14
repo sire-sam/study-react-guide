@@ -1,0 +1,38 @@
+[
+  {
+    "id": "a",
+    "author": {
+      "avatarUrl": "https://placekitten.com/g/64/64",
+      "name": "You"
+    },
+    "content": "I like to comment on the web",
+    "publishedDate": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "b",
+    "author": {
+      "avatarUrl": "https://placekitten.com/g/64/64",
+      "name": "Him"
+    },
+    "content": "You don't even know how to send an NetMail in a network",
+    "publishedDate": "1971-10-11T16:32:08.000Z"
+  },
+  {
+    "id": "C",
+    "author": {
+      "avatarUrl": "https://placekitten.com/g/64/64",
+      "name": "Them"
+    },
+    "content": "Web wasn't event a thing, we just brought i",
+    "publishedDate": "1989-03-12T09:24:14.000Z"
+  },
+  {
+    "id": "d",
+    "author": {
+      "avatarUrl": "http://place-puppy.com/64x64",
+      "name": "Lucifer"
+    },
+    "content": "We end it here",
+    "publishedDate": "3456-06-06T07:06:06.666Z"
+  }
+]
