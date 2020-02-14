@@ -10,7 +10,7 @@ const UserCard = (props: { user: UserInterface, className?: string }) => {
         {props.user.name}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default UserCard;

@@ -7,8 +7,8 @@ export class TopBar extends React.Component<{}, { isLoggedIn: boolean }> {
   static randomUserNames = ['World', 'God', 'George'];
 
   static randomName(): string {
-    const randomeIndex = Math.round(Math.random() * this.randomUserNames.length) - 1;
-    return this.randomUserNames[randomeIndex];
+    const randomIndex = Math.round(Math.random() * this.randomUserNames.length) - 1;
+    return this.randomUserNames[randomIndex];
   }
 
   private userName = TopBar.randomName();

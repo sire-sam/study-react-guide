@@ -15,7 +15,7 @@ const latestComment: CommentInterface = {
   author: activeUser,
   content: 'I like to comment on the web, before it exist',
   publishedDate: new Date(0),
-}
+};
 
 const App = () => {
   return (
@@ -45,6 +45,6 @@ const App = () => {
       </aside>
     </div>
   );
-}
+};
 
 export default App;

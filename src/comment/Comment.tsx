@@ -15,7 +15,7 @@ const Comment = (props: CommentInterface) => {
         </span>
       </span>
     </div>
-  )
-}
+  );
+};
 
 export default Comment;
