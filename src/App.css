@@ -30,7 +30,7 @@
 
 .btn {
 	box-sizing: border-box;
-	height: var(--control-size);
+	min-height: var(--control-size);
 	min-width: var(--control-size);
 	display: inline-block;
 	padding: var(--control-inner-space);
@@ -144,6 +144,16 @@
 	justify-content: flex-start;
 }
 
+.form-block {
+	display: flex;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+.form-block__input {
+	flex-grow: 1;
+}
+
 .input {
 	box-sizing: border-box;
 	height: var(--control-size);
@@ -154,6 +164,10 @@
 	color: #EEEEEE;
 	border: 1px solid #C4C4C4;
 	border-radius: var(--control-border-radius);
+}
+
+.input--area {
+	min-height: 5rem;
 }
 
 .input--stick-right {

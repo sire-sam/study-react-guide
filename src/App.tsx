@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TopBar } from './top-bar/TopBar';
-import { CommentList } from './comment/CommentList';
+import { CommentControl } from './comment/CommentControl';
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
       </main>
 
       <aside className="app__aside">
-        <CommentList/>
+        <CommentControl/>
       </aside>
     </div>
   );
