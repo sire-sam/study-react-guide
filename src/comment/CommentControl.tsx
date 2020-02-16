@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { CommentList } from './CommentList';
 import { AddComment } from './AddComment';
 import { CommentViewInterface } from './comment.interfaces';
-import { commentsDataAsView } from './utils/commentsDataAsView';
+import { commentsDataToView } from './utils/commentsDataToView';
 import commentsData from './comments.json';
+import { SortBar } from '../sort/SortBar';
+import { SortOptionsEnum } from '../sort/sortOptions.enum';
+import { sortComments } from './utils/sortComment';
 
 export class CommentControl<P extends {}, S extends { comments: CommentViewInterface[] }> extends Component<P, S> {
 
@@ -11,9 +14,10 @@ export class CommentControl<P extends {}, S extends { comments: CommentViewInter
   constructor(props: P) {
     super(props);
     this.state = {
-      comments: commentsDataAsView(commentsData),
+      comments: sortComments(commentsDataToView(commentsData), SortOptionsEnum.OLDER),
     } as Readonly<S>;
     this.onCommentAdded = this.onCommentAdded.bind(this);
+    this.onSortChanged = this.onSortChanged.bind(this);
   }
 
   onCommentAdded(content: string) {
@@ -30,9 +34,14 @@ export class CommentControl<P extends {}, S extends { comments: CommentViewInter
     this.setState({ comments });
   }
 
+  onSortChanged(sortBy: SortOptionsEnum) {
+    this.setState({ comments: sortComments(this.state.comments, sortBy) });
+  }
+
   render() {
     return (
       <div className="comment-section">
+        <SortBar onSortChanged={this.onSortChanged}/>
         <CommentList comments={this.state.comments}/>
         <AddComment commentAdded={this.onCommentAdded}/>
       </div>

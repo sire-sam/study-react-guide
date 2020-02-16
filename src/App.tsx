@@ -6,27 +6,34 @@ import { CommentControl } from './comment/CommentControl';
 
 const App = () => {
   return (
-    <div className="app">
-
+    <div className="app-wrapper">
       <TopBar/>
 
-      <main className="app__content">
-        <img src={logo} className="app__logo" alt="logo"/>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="btn"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </main>
+      <div className="app">
 
-      <aside className="app__aside">
-        <CommentControl/>
-      </aside>
+        <main className="app__content">
+          <img src={logo} className="main-picture" alt="logo"/>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <a
+            className="btn"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer">
+            Learn React
+          </a>
+        </main>
+
+        <aside className="app__aside">
+
+          <h2>
+            Comments
+          </h2>
+          <CommentControl/>
+        </aside>
+
+      </div>
     </div>
   );
 };

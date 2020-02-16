@@ -4,21 +4,30 @@
 	--control-size: 2rem;
 }
 
-.app {
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: stretch;
 }
 
-.app__logo {
+.main-picture {
 	height: 40vmin;
 	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.app__logo {
+	.main-picture {
 		animation: app-logo-spin infinite 20s linear;
 	}
 }
 
+.app {
+	flex-grow: 1;
+}
+
 .app__content {
+	flex-grow: 1;
 	margin-bottom: 2rem;
 	text-align: center;
 }
@@ -26,7 +35,23 @@
 .app__aside {
 	display: block;
 	border-top: 1px solid #4C4C4C;
+	background: #EEE;
+	padding: .5rem;
 }
+
+@media (min-width: 767px) {
+	.app {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.app__aside {
+		border-top: 0;
+		align-self: stretch;
+		justify-self: stretch;
+	}
+}
+
 
 .btn {
 	box-sizing: border-box;
@@ -125,8 +150,7 @@
 }
 
 .comment-list {
-	background: #EEE;
-	padding: .5rem;
+	margin-bottom: 1rem;
 }
 
 .comment-list__item {
