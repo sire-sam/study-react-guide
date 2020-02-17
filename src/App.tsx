@@ -1,15 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { TopBar } from './top-bar/TopBar';
 import { CommentControl } from './comment/CommentControl';
+import { ActionBar } from './action-bar/ActionBar';
 
 const App = () => {
   return (
     <div className="app-wrapper">
-      <TopBar/>
 
       <div className="app">
+
+        <ActionBar/>
 
         <main className="app__content">
           <img src={logo} className="main-picture" alt="logo"/>

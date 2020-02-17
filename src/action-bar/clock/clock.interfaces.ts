@@ -1,5 +1,5 @@
 export interface ClockPropsInterface {
-  label: string;
+  className?: string;
 }
 
 export interface ClockStatesInterface {

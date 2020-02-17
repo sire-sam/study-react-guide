@@ -22,6 +22,7 @@ export class CommentControl<P extends {}, S extends { comments: CommentViewInter
 
   onCommentAdded(content: string) {
     const newComment = {
+      id: Date.now().toString(),
       author: {
         avatarUrl: 'https://placekitten.com/g/64/64',
         name: 'You',

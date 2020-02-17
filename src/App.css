@@ -2,8 +2,247 @@
 	--control-border-radius: .5rem;
 	--control-inner-space: .5rem;
 	--control-size: 2rem;
+	--text-small: .87rem;
+	--color-negative: #4C4C4C;
+	--color-positive: #FFF;
 }
 
+html {
+	font-size: 14px;
+}
+
+/* Atom: Btn
+------------------------------------------------------------------------------------------------- */
+
+.btn {
+	box-sizing: border-box;
+	min-height: var(--control-size);
+	min-width: var(--control-size);
+	display: inline-block;
+	padding: var(--control-inner-space);
+
+	border-radius: var(--control-border-radius);
+
+	background: rebeccapurple;
+	color: white;
+	text-decoration: none;
+}
+
+.btn-hit-area {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.btn--stick-left {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.btn:disabled {
+	opacity: .6;
+}
+
+/* Atom: Input
+------------------------------------------------------------------------------------------------- */
+
+.input {
+	box-sizing: border-box;
+	height: var(--control-size);
+	min-width: var(--control-size);
+	padding: var(--control-inner-space);
+
+	background: #4C4C4C;
+	color: #EEEEEE;
+	border: 1px solid #C4C4C4;
+	border-radius: var(--control-border-radius);
+}
+
+.input--area {
+	min-height: 5rem;
+}
+
+.input--stick-right {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: 0;
+}
+
+/* Atom: avatar
+------------------------------------------------------------------------------------------------- */
+
+.avatar {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+
+/* Atom: card
+------------------------------------------------------------------------------------------------- */
+.emphasis {
+	padding: .5rem;
+
+	background: var(--color-positive);
+	border: 1px solid var(--color-negative);
+	border-radius: .5rem;
+	color: var(--color-negative);
+}
+
+/* Atom: pop-over
+------------------------------------------------------------------------------------------------- */
+.popover-area {
+	position: relative;
+}
+
+.popover {
+	position: absolute;
+	z-index: 2;
+}
+
+
+/* Molecule: action-bar
+------------------------------------------------------------------------------------------------- */
+
+.action-bar {
+	background-color: #282c34;
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	color: lightgray;
+	padding: 1rem;
+}
+
+.action-bar__brand {
+	width: 3rem;
+}
+
+.action-bar__actions {
+	display: block;
+	margin-left: 1rem;
+	margin-right: auto;
+}
+
+.action-bar__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.action-bar__login {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.action-bar__clock {
+	font-size: var(--text-small);
+}
+
+/* Molecule: Comment
+------------------------------------------------------------------------------------------------- */
+
+.comment {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	padding: .5rem 0;
+}
+
+.comment__meta-data {
+	margin-bottom: .25rem;
+}
+
+.comment__content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-self: stretch;
+	justify-content: space-between;
+}
+
+.comment__text {
+	margin: 0;
+}
+
+.comment__avatar {
+	flex-shrink: 0;
+	margin-right: .5rem;
+}
+
+.comment__author-name {
+	margin-right: .5rem;
+
+	font-size: var(--text-small);
+	font-weight: bold;
+}
+
+
+.comment__date {
+	font-size: var(--text-small);
+	font-style: italic;
+	color: dimgray;
+}
+
+
+/* Molecule: User card
+------------------------------------------------------------------------------------------------- */
+
+.user-card {
+	overflow: hidden;
+
+	text-align: center;
+
+	border-radius: .5rem;
+}
+
+.user-card__name {
+	font-size: .9rem;
+	margin-bottom: .2rem;
+}
+
+/* Organism: Comment list
+------------------------------------------------------------------------------------------------- */
+
+.comment-list {
+	margin-bottom: 1rem;
+}
+
+.comment-list__item {
+	padding: 1rem 0;
+	border-bottom: 1px solid #C4C4C4;
+}
+
+.comment-list__item:last-child {
+	border-bottom: 0;
+}
+
+
+/* Organism: Form list
+------------------------------------------------------------------------------------------------- */
+
+.form-inline {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+.form-block {
+	display: flex;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+.form-block__input {
+	flex-grow: 1;
+}
+
+
+.control-inline__name {
+	margin-right: .2rem;
+}
+
+/* Layout: App
+------------------------------------------------------------------------------------------------- */
 .app-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -39,6 +278,10 @@
 	padding: .5rem;
 }
 
+.app__bar {
+
+}
+
 @media (min-width: 767px) {
 	.app {
 		display: flex;
@@ -49,32 +292,27 @@
 		border-top: 0;
 		align-self: stretch;
 		justify-self: stretch;
+		flex-basis: 20rem;
+		flex-grow: 0;
+	}
+
+	.app__action-bar {
+		flex-direction: column;
+		width: 3rem;
+		flex-grow: 0;
+	}
+
+	.app__actions {
+		margin: 1rem auto auto;
+	}
+
+	.app__action-bar--open {
+		width: 20rem;
 	}
 }
 
-
-.btn {
-	box-sizing: border-box;
-	min-height: var(--control-size);
-	min-width: var(--control-size);
-	display: inline-block;
-	padding: var(--control-inner-space);
-
-	border-radius: var(--control-border-radius);
-
-	background: rebeccapurple;
-	color: white;
-	text-decoration: none;
-}
-
-.btn--stick-left {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.btn:disabled {
-	opacity: .6;
-}
+/* Misc: Animation
+------------------------------------------------------------------------------------------------- */
 
 @keyframes app-logo-spin {
 	from {
@@ -83,123 +321,4 @@
 	to {
 		transform: rotate(360deg);
 	}
-}
-
-.top-bar {
-	background-color: #282c34;
-	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-	justify-content: space-between;
-	font-size: 1rem;
-	color: lightgray;
-	padding: 1rem;
-}
-
-.top-bar__login {
-	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-}
-
-.top-bar__greeting {
-	margin: 0 .5rem 0;
-}
-
-.comment {
-	display: flex;
-	align-items: flex-start;
-	flex-direction: row;
-	padding: .5rem 0;
-}
-
-.comment__user-card {
-	flex-shrink: 0;
-	margin-right: .5rem;
-
-	color: darkblue;
-
-	background: lightgray;
-}
-
-.comment__content {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	align-self: stretch;
-	justify-content: space-between;
-}
-
-.comment__date {
-	font-size: .85rem;
-	font-style: italic;
-	color: dimgray;
-}
-
-.user-card {
-	overflow: hidden;
-
-	text-align: center;
-
-	border-radius: .5rem;
-}
-
-.user-card__name {
-	font-size: .9rem;
-	margin-bottom: .2rem;
-}
-
-.comment-list {
-	margin-bottom: 1rem;
-}
-
-.comment-list__item {
-	padding: 1rem 0;
-	border-bottom: 1px solid #C4C4C4;
-}
-
-.comment-list__item:last-child {
-	border-bottom: 0;
-}
-
-.form-inline {
-	display: flex;
-	align-items: baseline;
-	justify-content: flex-start;
-}
-
-.form-block {
-	display: flex;
-	align-items: stretch;
-	justify-content: stretch;
-}
-
-.form-block__input {
-	flex-grow: 1;
-}
-
-.input {
-	box-sizing: border-box;
-	height: var(--control-size);
-	min-width: var(--control-size);
-	padding: var(--control-inner-space);
-
-	background: #4C4C4C;
-	color: #EEEEEE;
-	border: 1px solid #C4C4C4;
-	border-radius: var(--control-border-radius);
-}
-
-.input--area {
-	min-height: 5rem;
-}
-
-.input--stick-right {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	border-right: 0;
-}
-
-.control-inline__name {
-	margin-right: .2rem;
 }

@@ -1,19 +1,22 @@
 import React from 'react';
-import UserCard from '../user/UserCard';
 import { CommentViewInterface } from './comment.interfaces';
+import Avatar from '../user/Avatar';
 
-const Comment = (props: CommentViewInterface & {className?: string}) => {
+const Comment = (props: CommentViewInterface & { className?: string }) => {
   return (
     <div className={`comment ${props.className}`}>
-      <UserCard className="comment__user-card" user={props.author}/>
-      <span className="comment__content">
-        <span>
-        {props.content}
-        </span>
-        <span className="comment__date">
-          {props.publishedDate.toLocaleString()}
-        </span>
-      </span>
+      <Avatar className="comment__avatar" user={props.author}/>
+      <article className="comment__content">
+        <footer className="comment__meta-data">
+          <span className="comment__author-name">{props.author.name}</span>
+          <span className="comment__date">
+            {props.publishedDate.toLocaleString()}
+          </span>
+        </footer>
+        <p className="comment__text">
+          {props.content}
+        </p>
+      </article>
     </div>
   );
 };

@@ -18,8 +18,8 @@ class Clock extends React.Component<ClockPropsInterface, ClockStatesInterface> {
 
   render(): ReactNode {
     return (
-      <span className="timer">
-      {this.props.label} {this.state.time.toLocaleTimeString()}
+      <span className={this.props.className}>
+      {this.state.time.toLocaleTimeString()}
     </span>
     )
   }

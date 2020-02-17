@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 import { LoginStateInterface } from './login.interfaces';
+import { LoggedUser } from './LoggedUser';
 import Login from './Login';
-import LogoutButton from './LogoutButton';
 
-export class LoginControl<P extends { change: (isLoggedIn: boolean, userName: string) => void }>
+export class LoginControl<P extends { change?: (isLoggedIn: boolean, userName: string) => void }>
   extends React.Component<P, LoginStateInterface> {
   private loginDelay = 1000;
 
@@ -19,7 +19,9 @@ export class LoginControl<P extends { change: (isLoggedIn: boolean, userName: st
   }
 
   private isLoggedInChanged() {
-    this.props.change(this.state.isLoggedIn, this.state.userName);
+    if (this.props.change) {
+      this.props.change(this.state.isLoggedIn, this.state.userName);
+    }
   }
 
   login(userName: string) {
@@ -38,8 +40,7 @@ export class LoginControl<P extends { change: (isLoggedIn: boolean, userName: st
 
   render(): ReactNode {
     return this.state.isLoggedIn
-      ? (<LogoutButton onClick={this.logout}/>)
+      ? (<LoggedUser onRequestLogout={this.logout} user={{avatarUrl: 'https://placekitten.com/g/64/64', name: this.state.userName}} />)
       : (<Login onSubmit={this.login} disabled={this.state.isLoggingIn}/>);
   }
-
 }
