@@ -44,6 +44,12 @@ html {
 	opacity: .6;
 }
 
+/* Atom: cover
+------------------------------------------------------------------------------------------------- */
+.cover {
+	text-align: center;
+}
+
 /* Atom: Input
 ------------------------------------------------------------------------------------------------- */
 
@@ -183,6 +189,18 @@ html {
 	color: dimgray;
 }
 
+/* Molecule: form-control
+------------------------------------------------------------------------------------------------- */
+.form-control {
+	display: block;
+	margin-bottom: .8rem;
+}
+
+.form-control__input {
+	display: block;
+	width: 100%;
+	margin-top: .2rem;
+}
 
 /* Molecule: User card
 ------------------------------------------------------------------------------------------------- */
@@ -268,7 +286,6 @@ html {
 .app__content {
 	flex-grow: 1;
 	margin-bottom: 2rem;
-	text-align: center;
 }
 
 .app__aside {
@@ -278,8 +295,13 @@ html {
 	padding: .5rem;
 }
 
-.app__bar {
+.app__cover {
+	margin-bottom: 5rem;
+}
 
+.app__feedback {
+	max-width: 40rem;
+	margin: 0 auto 2rem;
 }
 
 @media (min-width: 767px) {
