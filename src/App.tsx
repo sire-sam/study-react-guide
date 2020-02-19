@@ -4,6 +4,7 @@ import './App.css';
 import { CommentControl } from './comment/CommentControl';
 import { ActionBar } from './action-bar/ActionBar';
 import { FeedBack } from './feedback/FeedBack';
+import { Heater } from './heater/Heater';
 
 const App = () => {
   return (
@@ -31,6 +32,11 @@ const App = () => {
             <h2>Send Feedback!</h2>
             <FeedBack submit={console.log}/>
           </div>
+
+          <h2>
+            Water pan
+          </h2>
+          <Heater/>
         </main>
 
         <aside className="app__aside">
