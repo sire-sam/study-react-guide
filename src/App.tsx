@@ -5,6 +5,7 @@ import { CommentControl } from './comment/CommentControl';
 import { ActionBar } from './action-bar/ActionBar';
 import { FeedBack } from './feedback/FeedBack';
 import { Heater } from './heater/Heater';
+import { ProductList } from './products/ProductList';
 
 const App = () => {
   return (
@@ -37,6 +38,11 @@ const App = () => {
             Water pan
           </h2>
           <Heater/>
+
+          <h2>
+            Product list
+          </h2>
+          <ProductList/>
         </main>
 
         <aside className="app__aside">
