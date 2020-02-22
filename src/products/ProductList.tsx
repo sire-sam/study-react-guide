@@ -20,7 +20,7 @@ export function ProductList() {
           return (
             <Fragment key={i.name + i.firstInCat}>
               {i.firstInCat && <ListCategory name={i.category}/>}
-              <ListItem name={i.name} price={i.price}/>
+              <ListItem name={i.name} price={i.price} stocked={i.stocked}/>
             </Fragment>
           );
         })}
