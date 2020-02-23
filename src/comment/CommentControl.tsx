@@ -1,52 +1,37 @@
-import React, { Component } from 'react';
+import React, { useContext, useState } from 'react';
 import { CommentList } from './CommentList';
 import { AddComment } from './AddComment';
-import { CommentViewInterface } from './comment.interfaces';
 import { commentsDataToView } from './utils/commentsDataToView';
 import commentsData from './comments.json';
 import { SortBar } from '../sort/SortBar';
 import { SortOptionsEnum } from '../sort/sortOptions.enum';
 import { sortComments } from './utils/sortComment';
+import { UserContext } from '../user/user.context';
+import { UserInterface } from '../user/user.interface';
 
-export class CommentControl<P extends {}, S extends { comments: CommentViewInterface[] }> extends Component<P, S> {
+export function CommentControl() {
+  const [comments, setComments] = useState(sortComments(commentsDataToView(commentsData), SortOptionsEnum.OLDER));
+  const userContext = useContext(UserContext);
 
-
-  constructor(props: P) {
-    super(props);
-    this.state = {
-      comments: sortComments(commentsDataToView(commentsData), SortOptionsEnum.OLDER),
-    } as Readonly<S>;
-    this.onCommentAdded = this.onCommentAdded.bind(this);
-    this.onSortChanged = this.onSortChanged.bind(this);
-  }
-
-  onCommentAdded(content: string) {
+  function handleCommentAdded(content: string) {
     const newComment = {
       id: Date.now().toString(),
-      author: {
-        avatarUrl: 'https://placekitten.com/g/64/64',
-        name: 'You',
-      },
+      author: userContext.user as UserInterface,
       content,
       publishedDate: new Date(),
     };
-    const comments = Array.from(this.state.comments);
-    comments.push(newComment);
-    this.setState({ comments });
+    setComments(Array.prototype.concat(comments, [newComment]));
   }
 
-  onSortChanged(sortBy: SortOptionsEnum) {
-    this.setState({ comments: sortComments(this.state.comments, sortBy) });
+  function handleSortChanged(sortBy: SortOptionsEnum) {
+    setComments(sortComments(comments, sortBy));
   }
 
-  render() {
-    return (
-      <div className="comment-section">
-        <SortBar onSortChanged={this.onSortChanged}/>
-        <CommentList comments={this.state.comments}/>
-        <AddComment commentAdded={this.onCommentAdded}/>
-      </div>
-    );
-  }
-
+  return (
+    <div className="comment-section">
+      <SortBar onSortChanged={handleSortChanged}/>
+      <CommentList comments={comments}/>
+      {userContext.isLoggedIn && <AddComment commentAdded={handleCommentAdded}/>}
+    </div>
+  );
 }
