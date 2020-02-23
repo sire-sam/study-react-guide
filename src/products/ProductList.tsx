@@ -8,13 +8,23 @@ import { filteredList } from './products.utils';
 
 export function ProductList() {
   const [products, setProducts] = useState(filteredList('', false, productsData));
-  const handleSearch = (value: string, onlyInStock: boolean) => {
+  const [querySearch, setQuerySearch] = useState('');
+  const [onlyInStock, setOnlyInStock] = useState(false);
+  const handleQuerySearch = (value: string) => {
+    setQuerySearch(value);
     setProducts(filteredList(value, onlyInStock, productsData));
   };
-
+  const handleInStock = (onlyInStock: boolean) => {
+    setOnlyInStock(onlyInStock);
+    setProducts(filteredList(querySearch, onlyInStock, productsData));
+  };
   return (
     <div>
-      <SearchBar value={''} onChange={handleSearch}/>
+      <SearchBar
+        query={querySearch}
+        onlyInStock={onlyInStock}
+        onQueryChange={handleQuerySearch}
+        onInStockChange={handleInStock}/>
       <List>
         {products.map(i => {
           return (

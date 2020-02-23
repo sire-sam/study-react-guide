@@ -1,17 +1,17 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 
-export function SearchBar(props: { value: string, onlyInStock?: boolean, onChange: (value: string, onlyInStock: boolean) => void }) {
-  const [value, setValue] = useState(props.value);
-  const [onlyInStock, setOnlyInStack] = useState(props.onlyInStock || false);
+export function SearchBar(props: {
+  query: string,
+  onlyInStock?: boolean,
+  onQueryChange: (value: string) => void,
+  onInStockChange: (onlyInStock: boolean) => void,
+}) {
+  const { query, onlyInStock, onInStockChange, onQueryChange } = props;
   const handleValue = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setValue(e.target.value);
-    props.onChange(value, onlyInStock);
+    onQueryChange(e.target.value);
   };
   const handleOnlyInStock = (e: ChangeEvent<HTMLInputElement>) => {
-    const onlyInStock = e.target.checked;
-    setOnlyInStack(e.target.checked);
-    props.onChange(value, onlyInStock);
+    onInStockChange(e.target.checked);
   };
   return (
     <form>
@@ -21,7 +21,7 @@ export function SearchBar(props: { value: string, onlyInStock?: boolean, onChang
         </label>
         <input
           type="text"
-          value={value}
+          value={query}
           onChange={handleValue}
           placeholder="Iphone, Football, boat, ..."
         />
