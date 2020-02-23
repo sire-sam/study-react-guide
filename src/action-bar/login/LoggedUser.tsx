@@ -7,12 +7,8 @@ interface LoggedUserPropsInterface {
   user: UserInterface
 }
 
-export function LoggedUser(props: LoggedUserPropsInterface) {
+export function LoggedUser({user, onRequestLogout}: LoggedUserPropsInterface) {
   const [isOpen, setIsOpen] = useState(false);
-
-  function logout() {
-    props.onRequestLogout();
-  }
 
   function toggle() {
     setIsOpen(!isOpen);
@@ -23,14 +19,14 @@ export function LoggedUser(props: LoggedUserPropsInterface) {
       <button className="btn-hit-area" type="button" onClick={toggle}>
         <Avatar
           className="action-bar__icon"
-          user={props.user}/>
+          user={user}/>
       </button>
       {
         isOpen &&
         <div className="emphasis popover">
           <button
             className={'btn'}
-            onClick={logout}>
+            onClick={onRequestLogout}>
             Logout
           </button>
         </div>
