@@ -8,6 +8,8 @@ import { Heater } from './heater/Heater';
 import { ProductList } from './products/ProductList';
 import { UserContext } from './user/user.context';
 import { UserInterface } from './user/user.interface';
+import { ErrorBoundary } from './errors/ErrorBoundary';
+import { ThrowCounter } from './errors/ThrowCounter';
 
 const App = () => {
   const [user, setUser] = useState<UserInterface | undefined>(undefined);
@@ -63,6 +65,15 @@ const App = () => {
               Product list
             </h2>
             <ProductList/>
+
+            <h2>
+              BoundaryError
+            </h2>
+            <ErrorBoundary>
+              <ThrowCounter shouldThrow={true} />
+            </ErrorBoundary>
+            <ThrowCounter />
+            <ThrowCounter shouldThrow={true} />
           </main>
 
           <aside className="app__aside">
